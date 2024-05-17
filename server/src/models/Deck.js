@@ -1,7 +1,11 @@
-const { db, DataTypes } = require('../db/config')
+const {DataTypes} = require ('sequelize')
+const sequelize = require('../db/config')
 
-let Deck = db.define("Deck", {
-    id: DataTypes.INTEGER,
+const Deck = sequelize.define('Deck', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true
+      },
     name: DataTypes.STRING,
     xp: DataTypes.INTEGER
 });

@@ -1,9 +1,10 @@
-const { describe, it, expect, beforeAll, afterAll } = require('@jest/globals')
+const { describe, it, test, expect, beforeAll, afterAll } = require('@jest/globals')
 const { User } = require('.')
 const db = require('../db/config')
 
 // define in global scope
 let user
+let deck
 
 // clear db and create new user before tests
 beforeAll(async () => {
@@ -18,6 +19,12 @@ describe('User', () => {
   it('has an id', async () => {
     expect(user).toHaveProperty('id')
   })
+
+  test("has a username", async function() {
+    expect(user.username).toBe('gandalf');
+  })
+
+
 
   /**
    * Create more tests
