@@ -1,12 +1,12 @@
 const { DataTypes } = require('sequelize')
-const sequelize = require('../db/config')
+const sequelize = require('../db/config.js')
 
 
-let Attack = sequelize.define("attack", {
-    id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true
-      },
+const Attack = sequelize.define("Attack", {
+    // id: {
+    //     type: DataTypes.INTEGER,
+    //     primaryKey: true
+    //   },
     title: DataTypes.STRING,
     mojoCost: DataTypes.INTEGER,
     staminaCost: DataTypes.INTEGER
