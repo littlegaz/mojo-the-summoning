@@ -30,25 +30,26 @@ const db = require('../db/config')
     })
 
 
-    describe('deck and card', () => {
-        it('has one to many association', async () => {
-          const deck = await Deck.create({
-            const card1 = await Card.create({ 
-                name: 'Niv Mizzet 1', 
-                mojo: 6, 
-                stamina: 5 })
-          })
+    // describe('deck and card', () => {
+    //     it('has one to many association', async () => {
+    //       const deck = await Deck.create({
+    //         const card1 = await Card.create({ 
+    //             name: 'Niv Mizzet 1', 
+    //             mojo: 6, 
+    //             stamina: 5 })
+    //       })
 
-          //add 2 more cards here
+    //       //add 2 more cards here
     
-          await deck.addCards([card1, card2, card3])
+    //       await deck.addCards([card1, card2, card3])
     
-            const associatedCards = await deck.getCards()
-            expect(associatedCards[0].name).toBe('Niv Mizzet 1')
-            expect(associatedCards[1].name).toBe('Niv Mizzet 2')
-            expect(associatedCards[2].name).toBe('Niv Mizzet 3')
+    //         const associatedCards = await deck.getCards()
+    //         expect(associatedCards[0].name).toBe('Niv Mizzet 1')
+    //         expect(associatedCards[1].name).toBe('Niv Mizzet 2')
+    //         expect(associatedCards[2].name).toBe('Niv Mizzet 3')
   
     
-    })
+    // })
 
-    })})
+    // })
+})

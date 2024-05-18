@@ -1,7 +1,7 @@
-const sequelize  = require('../db/config.js')
 const { DataTypes } = require('sequelize')
+const sequelize  = require('../db/config.js')
 
-// create your User model here
+
 
 const User = sequelize.define('User', {
     // id: {
